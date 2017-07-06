@@ -24,3 +24,13 @@ tio(Alguien, Sobrino) :-
   hermano(Alguien, Padre).
   
 pareja(marge,homero).
+
+
+padre(homero, bart).
+padre(abraham, homero).
+
+descendiente(Descendiente, Ancestro) :- padre(Ancestro, Descendiente). 
+
+descendiente(Descendiente, Ancestro) :-
+  padre(Padre, Descendiente),
+  descendiente(Padre, Ancestro).
